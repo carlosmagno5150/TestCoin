@@ -4,5 +4,8 @@ class Transaction{
         this.toAddress = toAddress;
         this.ammount = ammount;
     }
+    calculateHash(){
+        ///signing TOD
+    }
 }
  module.exports = Transaction;
