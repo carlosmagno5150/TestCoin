@@ -20,6 +20,15 @@ class Block{
         }
         console.log("Block mined["+this.nonce+"]: " + this.hash);
     }
+
+    hasValidTransactions(){
+        for(const tx of this.transactions){
+            if(!tx.isValid()){
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 module.exports = Block;
